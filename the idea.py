@@ -11,8 +11,13 @@ elif yes==False:
   print("error")
 
 def encryption(mes):
-  enc_mes=mes+"(This message is encrypted)"
-  return enc_mes
+  msg = input("Enter a message to encrypt: ")
+encmsg = ""
+for ch in msg:
+    asc = ord(ch) + 3
+    ench = chr(asc)
+    encmsg += ench
+    return encmsg
 
 def send_sms(mes):
   fin_mes=encryption(mes)
@@ -24,4 +29,6 @@ if sent==True:
   print("Sent!")
 elif sent==False:
   print("error")
+
+
  
