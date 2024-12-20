@@ -1,14 +1,18 @@
 #imports
 import requests
+import base64
+import hashlib
+from Crypto import Random
+from Crypto.Cipher import AES
 
 #the values
 sent=False
 
 def sent(yes):
   if yes==True:
-  print("Sent!")
-elif yes==False:
-  print("error")
+    print("Sent!")
+  elif yes==False:
+    print("error")
 
 def encryption(mes):
   msg = input("Enter a message to encrypt: ")
