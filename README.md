@@ -1,6 +1,6 @@
 # Encsms
  - Encrypted messages via sms
- - Made in India (disputed) by Chinglen2080 and Romort2 
+ - Made in India
 
 # No Internet Required
  - Made for places where internet often goes down!
