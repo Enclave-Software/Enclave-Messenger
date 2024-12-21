@@ -15,4 +15,4 @@
  - Encsms is only for android devices!
 
 # Open Source 
- -Encsms is transparent, which means that you can check if the code interferes with your privacy 
+ - Encsms is transparent, which means that you can check if the code interferes with your privacy 
