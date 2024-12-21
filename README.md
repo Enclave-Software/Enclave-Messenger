@@ -20,5 +20,8 @@
 # Your Data Is In Your Control
  - You can delete your data by emailing us anytime!
 
+# Easter Eggs
+ - Encsms contains easter eggs!
+ - Find them all!
 # Contact Us
  - You can contact us on chinglen14@proton.me 
