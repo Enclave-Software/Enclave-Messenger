@@ -15,7 +15,10 @@
  - Encsms is only for android devices!
 
 # Open Source 
- - Encsms is transparent, which means that you can check if the code interferes with your privacy
+ - Encsms is transparent, which means that you can check if the code interferes with your privacy!
 
 # Your Data Is In Your Control
- - You can delete your data by email anytime 
+ - You can delete your data by emailing us anytime!
+
+# Contact Us
+ - You can contact us on chinglen14@proton.me 
