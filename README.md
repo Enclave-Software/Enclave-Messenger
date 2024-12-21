@@ -9,7 +9,10 @@
  - Your data is not stored on our servers!
 
 # Flexible 
- - Encsms is open source software, which means that it can be customized to meet your specific needs.
+ - Encsms cam be installed on any device because it rins on android!
 
 # Team Android
  - Encsms is only for android devices!
+
+# Open Source 
+ -Encsms is transparent, which means that you can check if the code interferes with your privacy 
