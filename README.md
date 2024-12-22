@@ -1,3 +1,5 @@
+<img src="https://github.com/Chinglen2080/ENCSMS/blob/main/IMG-20241220-WA0000.jpg" width="100" height="100">
+
 # Encsms
  - Encrypted messages via sms
  - Made in India
