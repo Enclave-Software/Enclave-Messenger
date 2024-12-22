@@ -25,5 +25,9 @@
 # Easter Eggs
  - Encsms contains easter eggs!
  - Find them all!
+
+# Coustom Chats via APIs
+ - Use custom APIs for coustom chats
+
 # Contact Us
  - You can contact us on chinglen14@proton.me 
