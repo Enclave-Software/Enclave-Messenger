@@ -1,4 +1,4 @@
-<img src="https://github.com/Chinglen2080/ENCSMS/blob/main/IMG-20241220-WA0000.jpg" width="900" height="900">
+<img src="https://github.com/Chinglen2080/ENCSMS/blob/main/IMG-20241220-WA0000.jpg" width="700" height="700">
 
 # Encsms
  - Encrypted messages via sms
