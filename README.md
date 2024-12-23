@@ -1,5 +1,4 @@
-
-# Encsms
+# SecureSMS
  - Encrypted messages via sms
  - Made in India
 
