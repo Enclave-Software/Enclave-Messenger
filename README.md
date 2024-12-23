@@ -1,4 +1,3 @@
-<img src="https://github.com/Chinglen2080/ENCSMS/blob/main/IMG-20241220-WA0000.jpg" width="500" height="500">
 
 # Encsms
  - Encrypted messages via sms
@@ -31,3 +30,7 @@
 
 # Contact Us
  - You can contact us on chinglen14@proton.me 
+
+# Made with Romort2 form imphal 
+# &
+# Chinglen2080 from Pune
