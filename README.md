@@ -32,6 +32,6 @@
  - You can contact us on chinglen14@proton.me 
 
 # Made with!!
- Romort2 form imphal 
+ Made with the help of Romort2 form imphal 
  &
  Chinglen2080 from Pune
