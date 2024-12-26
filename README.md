@@ -31,6 +31,6 @@
  - You can contact us on chinglen14@proton.me 
 
 # Made with!!
- - Made with the help of Romort2 form imphal 
+ - Made with the help of Romort2 form Imphal, Manipur 
  &
- Chinglen2080 from Pune
+ Chinglen2080 from Pune,Maharashtra 
