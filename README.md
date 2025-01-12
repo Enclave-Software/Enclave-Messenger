@@ -1,4 +1,4 @@
-# SecureSMS
+# SecureSMS (On hold)
  - Encrypted messages via sms
  - Made in India
 
