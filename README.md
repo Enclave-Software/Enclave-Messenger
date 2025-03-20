@@ -1,6 +1,7 @@
 # SecureSMS (On hold)
  - Encrypted messages via sms
  - Made in India
+ - Based on [Silence](https://github.com/SilenceIM/Silence)
 
 # No Internet Required
  - Made for places where internet often goes down!
