@@ -29,7 +29,7 @@
  - Use custom APIs for coustom chats
 
 # Contact Us
- - You can contact us on chinglen14@proton.me 
+ - You can contact [Chinglen2080](chinglen14@proton.me) or [Romort2](rupertlikesshortwaves@proton.me)
 
 # Made with!!
  - Made with the help of Romort2 form Imphal, Manipur 
