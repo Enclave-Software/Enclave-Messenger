@@ -1,4 +1,4 @@
-# SecureSMS (On hold)
+# EncSMS (On hold)
  - Encrypted messages via sms
  - Made in India
  - Based on [Silence](https://github.com/SilenceIM/Silence)
