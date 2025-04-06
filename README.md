@@ -4,7 +4,7 @@
  - Based on [Silence](https://github.com/SilenceIM/Silence)
 
 # No Internet Required
- - Made for places where internet often goes down!
+ - Made for places where internet often goes down! (or taken down by the _government_)
 
 # Privacy Forever
  - Your data is not stored on our servers!
@@ -23,7 +23,6 @@
 
 # Easter Eggs
  - Encsms contains easter eggs!
- - Find them all!
 
 # Coustom Chats via APIs
  - Use custom APIs for coustom chats
