@@ -4,13 +4,13 @@
  - Based on [Silence](https://github.com/SilenceIM/Silence)
 
 # No Internet Required
- - Made for places where internet often goes down! (or taken down by the _government_)
+ - Made for places where internet often goes down! 
 
 # Privacy Forever
  - Your data is not stored on our servers!
 
 # Flexible 
- - Encsms cam be installed on any device because it rins on android!
+ - Encsms cam be installed on any device because it runs on android!
 
 # Team Android
  - Encsms is only for android devices!
@@ -28,9 +28,7 @@
  - Use custom APIs for coustom chats
 
 # Contact Us
- - You can contact [Chinglen2080](chinglen14@proton.me) or [Romort2](rupertlikesshortwaves@proton.me)
+ - You can contact [Chinglen2080](chinglen14@proton.me)
 
 # Made with!!
- - Made with the help of Romort2 form Imphal, Manipur 
- &
- Chinglen2080 from Pune, Maharashtra 
+ - Made by Chinglen2080 from Pune, Maharashtra 
