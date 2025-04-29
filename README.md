@@ -12,9 +12,6 @@
 # Open Source 
  - Encsms is transparent, which means that you can check if the code interferes with your privacy!
 
-# Your Data Is In Your Control
- - You can delete your data by emailing us anytime!
-
 # Easter Eggs
  - Encsms contains easter eggs!
 
