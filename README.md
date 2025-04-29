@@ -1,4 +1,4 @@
-# EncSMS (On hold)
+# Ghose Secure Messenger (On hold)
  - Encrypted messages via sms
  - Made in India
  - Based on [Silence](https://github.com/SilenceIM/Silence)
