@@ -9,9 +9,6 @@
 # Flexible 
  - Encsms cam be installed on any device because it runs on android!
 
-# Team Android
- - Encsms is only for android devices!
-
 # Open Source 
  - Encsms is transparent, which means that you can check if the code interferes with your privacy!
 
