@@ -96,6 +96,15 @@ def send_msg(event=None):
             beep()
             msg_entry.delete(0, tk.END)
             return
+        elif msg == "/send_boom":
+            emoji_rain()
+            encrypted_boom = cipher.encrypt("/boom".encode())
+            conn.send(encrypted_boom)
+            chat.config(state='normal')
+            chat.insert(tk.END, f"{username}: /boom (sent)\n")
+            chat.config(state='disabled')
+            msg_entry.delete(0, tk.END)
+            return
 
         encrypted = cipher.encrypt(msg.encode())
         conn.send(encrypted)
