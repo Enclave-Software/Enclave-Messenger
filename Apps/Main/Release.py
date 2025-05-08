@@ -1,7 +1,7 @@
 import socket, threading, tkinter as tk
 from tkinter import simpledialog, scrolledtext, messagebox
 from cryptography.fernet import Fernet
-import random, time, winsound
+import random, time
 
 # Shared key input
 root = tk.Tk()
@@ -40,7 +40,7 @@ ascii_art = [
 
 def beep():
     try:
-        winsound.Beep(600, 200)
+        print("beep")
     except:
         print("Beep not supported")
 
