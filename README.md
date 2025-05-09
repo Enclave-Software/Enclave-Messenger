@@ -23,4 +23,5 @@
  - Add APIs 
  - Plug-ins 
  - Wiki
+ - Ripple support
  - :secret:
