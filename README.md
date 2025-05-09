@@ -23,5 +23,5 @@
  - Add APIs 
  - Plug-ins 
  - Wiki
- - Ripple support
+ - [Ripple](https://github.com/guardianproject/ripple) support
  - :secret:
