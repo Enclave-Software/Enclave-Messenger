@@ -13,6 +13,7 @@ if not shared_key:
 cipher = Fernet(shared_key.encode())
 mode = simpledialog.askstring("Mode", "Enter mode (host/client):")
 
+
 # GUI setup
 root = tk.Tk()
 root.title("Encrypted P2P Chat")
@@ -21,12 +22,15 @@ chat.pack()
 msg_entry = tk.Entry(root)
 msg_entry.pack(fill=tk.BOTH, expand=True)
 
+
 conn = None
 username = simpledialog.askstring("Username", "Enter your username:")
+
 
 # Konami code sequence
 konami_sequence = ['Up', 'Up', 'Down', 'Down', 'Left', 'Right', 'Left', 'Right', 'b', 'a']
 user_sequence = []
+
 
 # Easter eggs
 jokes = [
@@ -44,9 +48,11 @@ def beep():
     except:
         print("Beep not supported")
 
+
 def matrix_mode():
     chat.config(bg="black", fg="green")
     msg_entry.config(bg="black", fg="lime")
+
 
 def emoji_rain():
     emojis = ['💥', '✨', '🔥', '💣', '⚡']
@@ -59,8 +65,10 @@ def emoji_rain():
             time.sleep(0.1)
     threading.Thread(target=drop).start()
 
+
 def show_konami():
     messagebox.showinfo("Easter Egg!", "You unlocked the Konami secret!")
+
 
 # Receive messages
 def receive(sock):
@@ -106,12 +114,14 @@ def send_msg(event=None):
             msg_entry.delete(0, tk.END)
             return
 
+
         encrypted = cipher.encrypt(msg.encode())
         conn.send(encrypted)
         chat.config(state='normal')
         chat.insert(tk.END, f"{username}: {msg}\n")
         chat.config(state='disabled')
         msg_entry.delete(0, tk.END)
+
 
 # Konami sequence detection
 def track_keys(event):
@@ -140,5 +150,7 @@ def setup_connection():
         conn.connect((host_ip, 12345))
     threading.Thread(target=receive, args=(conn,), daemon=True).start()
 
+
 threading.Thread(target=setup_connection, daemon=True).start()
 root.mainloop()
+
