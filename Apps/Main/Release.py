@@ -42,6 +42,7 @@ ascii_art = [
     "( ͡° ͜ʖ ͡°)", "¯\\_(ツ)_/¯", "༼ つ ◕_◕ ༽つ"
 ]
 
+
 def beep():
     try:
         print("beep")
@@ -56,6 +57,7 @@ def matrix_mode():
 
 def emoji_rain():
     emojis = ['💥', '✨', '🔥', '💣', '⚡']
+
     def drop():
         for _ in range(10):
             chat.config(state='normal')
@@ -70,7 +72,6 @@ def show_konami():
     messagebox.showinfo("Easter Egg!", "You unlocked the Konami secret!")
 
 
-# Receive messages
 def receive(sock):
     while True:
         try:
@@ -83,7 +84,7 @@ def receive(sock):
         except:
             break
 
-# Send messages
+
 def send_msg(event=None):
     msg = msg_entry.get()
     if msg:
@@ -114,7 +115,6 @@ def send_msg(event=None):
             msg_entry.delete(0, tk.END)
             return
 
-
         encrypted = cipher.encrypt(msg.encode())
         conn.send(encrypted)
         chat.config(state='normal')
@@ -123,7 +123,6 @@ def send_msg(event=None):
         msg_entry.delete(0, tk.END)
 
 
-# Konami sequence detection
 def track_keys(event):
     key = event.keysym
     user_sequence.append(key)
@@ -135,7 +134,6 @@ msg_entry.bind("<Return>", send_msg)
 root.bind("<KeyPress>", track_keys)
 
 
-# Connection setup
 def setup_connection():
     global conn
     if mode == 'host':
@@ -153,4 +151,3 @@ def setup_connection():
 
 threading.Thread(target=setup_connection, daemon=True).start()
 root.mainloop()
-
