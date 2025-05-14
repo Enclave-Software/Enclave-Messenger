@@ -120,8 +120,10 @@ def track_keys(event):
     if user_sequence[-len(konami_sequence):] == konami_sequence:
         show_konami()
 
+
 msg_entry.bind("<Return>", send_msg)
 root.bind("<KeyPress>", track_keys)
+
 
 # Connection setup
 def setup_connection():
