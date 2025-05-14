@@ -1,6 +1,7 @@
 import socket, threading, json, time, os
-from pgpy import PGPKey, PGPMessage
 from datetime import datetime
+from pgpy import PGPKey, PGPMessage, PGPUID
+from pgpy.constants import PGPKeyAlgorithm, KeyFlags, HashAlgorithm, SymmetricKeyAlgorithm
 
 # Generate/load keys
 key_file = "pgp_key.json"
@@ -91,7 +92,7 @@ print("Ghost Secure Messenger CLI (type '/help' for commands)")
 while True:
     inp = input("> ")
     if inp == "/help":
-        print("Commands: /send, /joke, /ascii, /status, /exit")
+        print("Commands: /send [ip] [message], /joke, /ascii, /status, /exit")
     elif inp.startswith("/send"):
         parts = inp.split()
         ip = parts[1]
