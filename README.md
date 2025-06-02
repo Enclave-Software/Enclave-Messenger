@@ -1,5 +1,5 @@
 # Ghost Secure Messenger
-- Encrypted messages via SMS
+- Encrypted messages via Internet or Local Network
 - Made in India
 
 # No Internet Required
