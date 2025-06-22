@@ -1,7 +1,7 @@
 import socket, threading, json, time, os
 from datetime import datetime
 from pgpy import PGPKey, PGPMessage, PGPUID
-from pgpy.constants import PGPKeyAlgorithm, KeyFlags, HashAlgorithm, SymmetricKeyAlgorithm
+from pgpy.constants import PubKeyAlgorithm, KeyFlags, HashAlgorithm, SymmetricKeyAlgorithm
 
 # Generate/load keys
 key_file = "pgp_key.json"
@@ -13,7 +13,7 @@ if os.path.exists(key_file):
         pub_key = PGPKey()
         pub_key.parse(keys["public"])
 else:
-    priv_key = PGPKey.new(PGPKeyAlgorithm.RSAEncryptOrSign, 2048)
+    priv_key = PGPKey.new(PubKeyAlgorithm.RSAEncryptOrSign, 2048)
     uid = PGPUID.new("Ghost", comment="Secure CLI", email="ghost@cli")
     priv_key.add_uid(uid, usage={KeyFlags.EncryptCommunications},
                      hashes=[HashAlgorithm.SHA256], ciphers=[SymmetricKeyAlgorithm.AES256])
