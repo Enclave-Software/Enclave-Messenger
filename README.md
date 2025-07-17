@@ -26,5 +26,6 @@
 - [Ripple](https://github.com/guardianproject/ripple) support
 - Camera detection 
 - Pear-to-pear network
-- Multilingual 
+- Multilingual
+- Payment 
 - :secret:
