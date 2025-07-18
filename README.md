@@ -28,4 +28,4 @@
 - Pear-to-pear network
 - Multilingual
 - Payment 
-- :secret:
+- And More!
