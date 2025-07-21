@@ -1,4 +1,4 @@
-# Ghost Secure Messenger
+# Enclave Messenger
 - Encrypted messages via Internet or Local Network
 - Made in India
 
