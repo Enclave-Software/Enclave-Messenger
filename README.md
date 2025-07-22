@@ -6,7 +6,7 @@
 - Made for places where the internet often goes down! (It works on a LAN network, and can run on WAN, MAN, CAN, etc. networks)
 
 # Flexible
-- Encsms can be installed on (almost) any device because it's based on Python!
+- Enclave Messenger can be installed on (almost) any device because it's based on Python!
 
 # Easter Eggs
 - Encsms contains easter eggs!
