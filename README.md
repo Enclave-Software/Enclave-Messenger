@@ -14,7 +14,7 @@
 # Contact Us
 - You can contact [Chinglen2080](mailto:chinglen14@proton.me)
 
-# Made with!!
+# Made By
 - Made by Chinglen2080 from Pune, Maharashtra and  ProPoswal from Haryana.
 
 # To do
