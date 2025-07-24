@@ -2,295 +2,284 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <img src="https://github.com/Chinglen2080/Ghost-Secure-Messenger/blob/843a8b36ce85fae16b20a05b465ed91c2db4a5f1/ext/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost Secure Messenger - Secure Network Communication</title>
+    <title>Enclave Messenger - Secure Encrypted Messaging</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base styles for light mode */
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Dark gray text */
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .hero-bg {
-            background-color: #000000;
-            background-image: linear-gradient(140deg, #5D3FD3 50%, #FFD700 50%); /* Subtle gradient */
+        .container {
+            max-width: 1200px;
         }
-        .feature-card {
-            transition: transform 1s ease, box-shadow 1s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .glow-effect {
-            box-shadow: 0 0 15px 5px rgba(72, 187, 120, 0.3);
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            padding: 2rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .btn-primary {
-            background-color: #48BB78; 
-            color: white;
+            background-color: #4f46e5; /* Indigo 600 */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* font-semibold */
             transition: background-color 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: #000000; 
+            background-color: #4338ca; /* Indigo 700 */
         }
-        .btn-secondary {
-            background-color: transparent;
-            color: #4A5568; /* Gray */
-            border: 1px solid #4A5568;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        .feature-icon {
+            color: #4f46e5; /* Indigo 600 */
         }
-        .btn-secondary:hover {
-            background-color: #00a200;
-            color: white;
+
+        /* Dark mode styles */
+        html.dark body {
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
         }
-        /* Custom icon styling */
-        .icon-placeholder {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-bottom: 1rem;
+        html.dark .card {
+            background-color: #2d3748; /* Darker card background */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
         }
-        .navbar-logo {
-            width: 32px; /* Equivalent to w-8 */
-            height: 32px; /* Equivalent to h-8 */
-            margin-right: 0.5rem; /* Equivalent to mr-2 */
-            border-radius: 0.25rem; /* Small rounding for consistency */
+        html.dark .text-gray-800 {
+            color: #e2e8f0; /* Light text for headings */
         }
-        .hero-logo {
-            width: 96px; /* Equivalent to w-24 */
-            height: 96px; /* Equivalent to h-24 */
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 1.5rem; /* Equivalent to mb-6 */
-            border-radius: 0.5rem; /* Slightly larger rounding */
+        html.dark .text-gray-600 {
+            color: #a0aec0; /* Lighter gray text */
+        }
+        html.dark .text-gray-700 {
+            color: #cbd5e0; /* Even lighter gray text */
+        }
+        html.dark .feature-icon {
+            color: #81e6d9; /* Teal color for icons in dark mode */
+        }
+        html.dark .bg-white {
+            background-color: #2d3748; /* Darker header/footer background */
+        }
+        html.dark .shadow-sm {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        }
+        html.dark .bg-gray-50 {
+            background-color: #1a202c; /* Darker section background */
+        }
+        html.dark .btn-primary {
+            background-color: #667eea; /* Lighter indigo for dark mode button */
+        }
+        html.dark .btn-primary:hover {
+            background-color: #7f9cf5; /* Even lighter indigo on hover */
+        }
+        html.dark .text-indigo-300 {
+            color: #9f7aea; /* Purple for links in dark mode */
+        }
+        html.dark .hover\:text-indigo-100:hover {
+            color: #d6bcfa; /* Lighter purple on hover */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
-
-    <nav class="bg-gray-800/80 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-white">
-                    <a href="#" class="flex items-center">
-                        <img src="https://github.com/Chinglen2080/Ghost-Secure-Messenger/blob/main/ext/icon.png?raw=true" alt="Ghost Secure Messenger Logo" class="navbar-logo">
-                        Ghost<span class="text-green-400">Secure</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#features" class="text-gray-300 hover:text-green-400 transition-colors">Features</a>
-                    <a href="#how-it-works" class="text-gray-300 hover:text-green-400 transition-colors">How it Works</a>
-                    <a href="#about" class="text-gray-300 hover:text-green-400 transition-colors">About</a>
-                    <a href="https://github.com/chinglen2080/ghost-secure-messenger" target="_blank" rel="noopener noreferrer" class="btn-primary py-2 px-4 rounded-lg text-sm font-medium">
-                        View on GitHub
-                    </a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-green-400 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col items-center">
+        <!-- Header -->
+        <header class="w-full bg-white shadow-sm py-4">
+            <nav class="container mx-auto px-4 flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-gray-800">Enclave Messenger</a>
+                <div class="flex items-center space-x-4">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
+                    <a href="#security" class="text-gray-600 hover:text-gray-900">Security</a>
+                    <a href="#how-to-use" class="text-gray-600 hover:text-gray-900">How to Use</a>
+                    <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="text-gray-600 hover:text-gray-900">GitHub</a>
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <!-- Sun icon for light mode, Moon icon for dark mode -->
+                        <svg id="sun-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.325-4.775l-.707-.707M6.382 17.618l-.707.707M17.618 6.382l.707-.707M6.382 6.382l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                        <svg id="moon-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                     </button>
                 </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-5xl font-extrabold mb-4 leading-tight">Enclave Messenger: Secure & Encrypted Communication</h1>
+                <p class="text-xl mb-8 opacity-90">An encrypted messaging application designed for reliable communication over various networks (LAN, WAN, MAN, CAN), especially in areas with limited internet connectivity.</p>
+                <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="btn-primary inline-block">
+                    Explore on GitHub
+                </a>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-3">
-                <a href="#features" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 hover:text-green-400 rounded">Features</a>
-                <a href="#how-it-works" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 hover:text-green-400 rounded">How it Works</a>
-                <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 hover:text-green-400 rounded">About</a>
-                <a href="https://github.com/chinglen2080/ghost-secure-messenger" target="_blank" rel="noopener noreferrer" class="block py-2 px-4 text-sm btn-primary mt-2 rounded-lg text-center">View on GitHub</a>
-            </div>
-        </div>
-    </nav>
+        </section>
 
-    <header class="hero-bg pt-32 pb-20 text-white text-center">
-        <div class="container mx-auto px-6">
-            <img src="https://github.com/Chinglen2080/Ghost-Secure-Messenger/blob/main/ext/icon.png?raw=true" alt="Ghost Secure Messenger Logo" class="hero-logo opacity-90">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Ghost Secure Messenger</h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Communicate securely over your local network or the internet.
-                <br class="hidden md:block">Private, reliable, and flexible messaging.
-            </p>
-            <a href="https://github.com/chinglen2080/ghost-secure-messenger" target="_blank" rel="noopener noreferrer" class="btn-primary py-3 px-8 rounded-lg text-lg font-semibold inline-block glow-effect">
-                Get Started on GitHub
-            </a>
-        </div>
-    </header>
-
-    <section id="features" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Core Features</h2>
-            <p class="text-center text-gray-400 mb-12 max-w-xl mx-auto">Discover what makes Ghost Secure Messenger unique and powerful for private communication.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-700 p-6 rounded-xl shadow-xl feature-card">
-                    <div class="icon-placeholder bg-green-500/20 text-green-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+        <!-- Features Section -->
+        <section id="features" class="w-full py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1: Encrypted Messaging -->
+                    <div class="card flex flex-col items-center text-center">
+                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-2 4h4m6-10V7a4 4 0 00-4-4H8a4 4 0 00-4 4v10a4 4 0 004 4h8a4 4 0 004-4v-2m-6 0H6"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">End-to-End Encryption</h3>
+                        <p class="text-gray-600">Ensures your messages are private and secure from sender to receiver.</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Encrypted Network Messaging</h3>
-                    <p class="text-gray-400">Sends all messages securely encrypted over your local network (LAN) or the internet, protecting your conversations.</p>
+                    <!-- Feature 2: Multi-Network Support -->
+                    <div class="card flex flex-col items-center text-center">
+                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9l2.592-5.251a1 1 0 01.948-.684H19a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Versatile Network Compatibility</h3>
+                        <p class="text-gray-600">Works seamlessly across LAN, WAN, MAN, and CAN networks.</p>
+                    </div>
+                    <!-- Feature 3: Low Connectivity Resilience -->
+                    <div class="card flex flex-col items-center text-center">
+                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Offline-Friendly Design</h3>
+                        <p class="text-gray-600">Optimized for reliable communication even in areas with limited internet access.</p>
+                    </div>
+                    <!-- Feature 4: HTML & Python Based -->
+                    <div class="card flex flex-col items-center text-center">
+                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Built with Web Technologies</h3>
+                        <p class="text-gray-600">Developed using HTML and Python for broad compatibility and functionality.</p>
+                    </div>
+                    <!-- Feature 5: Command-Line Interface (Implied by Python/HTML) -->
+                    <div class="card flex flex-col items-center text-center">
+                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 2.895 1.191 5.584 3.14 7.534L12 22.05l5.94-5.94a8 8 0 003.04-8.618A12.001 12.001 0 0021.08 12c0-2.895-1.191-5.584-3.14-7.534z"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Simple & Secure Setup</h3>
+                        <p class="text-gray-600">Designed for straightforward deployment and use in various environments.</p>
+                    </div>
+                    <!-- Feature 6: Highly Portable (General) -->
+                    <div class="card flex flex-col items-center text-center">
+                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Highly Portable</h3>
+                        <p class="text-gray-600">The application is designed to be easily deployed and used across different systems.</p>
+                    </div>
                 </div>
 
-                <div class="bg-gray-700 p-6 rounded-xl shadow-xl feature-card">
-                     <div class="icon-placeholder bg-blue-500/20 text-blue-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">LAN & Internet Operation</h3>
-                    <p class="text-gray-400">Functions on your local network (even offline from the internet) and can also utilize an internet connection for wider reach.</p>
-                </div>
-
-                <div class="bg-gray-700 p-6 rounded-xl shadow-xl feature-card">
-                    <div class="icon-placeholder bg-purple-500/20 text-purple-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Flexible Network Support</h3>
-                    <p class="text-gray-400">Operates on various network types including LAN, WAN, MAN, and CAN, offering flexibility in deployment.</p>
-                </div>
-
-                <div class="bg-gray-700 p-6 rounded-xl shadow-xl feature-card">
-                    <div class="icon-placeholder bg-yellow-500/20 text-yellow-400">
-                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.2239 10.0598L19.581 6.70291C19.9628 6.32111 20.5372 6.32111 20.919 6.70291L22.2971 8.08103C22.6789 8.46283 22.6789 9.03717 22.2971 9.41897L18.9402 12.7761C18.5584 13.1579 17.984 13.1579 17.6022 12.7761L16.2239 11.3978C15.8421 11.016 15.8421 10.4416 16.2239 10.0598Z"/>
-                            <path d="M12.7761 18.9402L9.41897 22.2971C9.03717 22.6789 8.46283 22.6789 8.08103 22.2971L6.70291 20.919C6.32111 20.5372 6.32111 19.9628 6.70291 19.581L10.0598 16.2239C10.4416 15.8421 11.016 15.8421 11.3978 16.2239L12.7761 17.6022C13.1579 17.984 13.1579 18.5584 12.7761 18.9402Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7729 5.29038C11.1689 4.43838 12.0534 3.90957 13.0097 4.03677C14.8393 4.27837 15.8817 6.16819 15.0162 7.74419L10.7947 15.318C10.4099 16.0212 9.70787 16.4904 8.92197 16.5624C7.15277 16.7224 5.90038 15.0152 6.37038 13.3432L10.7729 5.29038ZM12.0313 6.80078C11.8001 6.30558 12.1105 5.72717 12.6389 5.58957C13.1157 5.46317 13.6333 5.73758 13.7973 6.19918L17.1787 12.255C17.4099 12.7502 17.0995 13.3286 16.5711 13.4662C16.0943 13.5926 15.5767 13.3182 15.4127 12.8566L12.0313 6.80078Z" />
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29038 10.7729C4.43838 11.1689 3.90957 12.0534 4.03677 13.0097C4.27837 14.8393 6.16819 15.8817 7.74419 15.0162L15.318 10.7947C16.0212 10.4099 16.4904 9.70787 16.5624 8.92197C16.7224 7.15277 15.0152 5.90038 13.3432 6.37038L5.29038 10.7729ZM6.80078 12.0313C6.30558 11.8001 5.72717 12.1105 5.58957 12.6389C5.46317 13.1157 5.73758 13.6333 6.19918 13.7973L12.255 17.1787C12.7502 17.4099 13.3286 17.0995 13.4662 16.5711C13.5926 16.0943 13.3182 15.5767 12.8566 15.4127L6.80078 12.0313Z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Python-Based Flexibility</h3>
-                    <p class="text-gray-400">Built with Python, making it adaptable and installable on a wide range of devices and operating systems.</p>
-                </div>
-
-                <div class="bg-gray-700 p-6 rounded-xl shadow-xl feature-card">
-                    <div class="icon-placeholder bg-orange-500/20 text-orange-400">
-                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="8" fill="#FF9933"/> <rect y="8" width="24" height="8" fill="white"/> <rect y="16" width="24" height="8" fill="#138808"/> <circle cx="12" cy="12" r="2.5" fill="#000080"/> </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">🇮🇳 Made in Manipur, India</h3>
-                    <p class="text-gray-400">Proudly developed in Manipur, India, contributing to technological self-reliance.</p>
-                </div>
-
-                <div class="bg-gray-700 p-6 rounded-xl shadow-xl feature-card">
-                    <div class="icon-placeholder bg-pink-500/20 text-pink-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Fun Easter Eggs</h3>
-                    <p class="text-gray-400">Discover hidden surprises and playful features embedded within the application for an enjoyable experience.</p>
+                <!-- Upcoming Features Section -->
+                <div class="mt-16 card mx-auto max-w-3xl">
+                    <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">Upcoming Features</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 text-lg">
+                        <li>SMS, Android, and iOS support</li>
+                        <li>APIs and Plug-in architecture</li>
+                        <li>Integrated Wiki and Ripple support</li>
+                        <li>Camera detection and Peer-to-peer networking</li>
+                        <li>Multilingual support and Payment options</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="how-it-works" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">How Ghost Secure Messenger Works</h2>
-                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-                    Ghost Secure Messenger uses your local network or an internet connection for communication, adding a robust layer of encryption to ensure your messages remain private.
+        <!-- Security Properties Section -->
+        <section id="security" class="w-full py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Robust Security Properties</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Confidentiality</h3>
+                        <p class="text-gray-600">Message contents are encrypted and only visible to authorized participants.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Authentication</h3>
+                        <p class="text-gray-600">Ensures that messages cannot be undetectably altered by unauthorized parties.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Anonymity</h3>
+                        <p class="text-gray-600">Designed to protect user identity where possible, focusing on secure message delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use / Installation Section -->
+        <section id="how-to-use" class="w-full py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">How to Use Enclave Messenger</h2>
+                <div class="card mx-auto max-w-3xl">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Enclave Messenger is built with HTML and Python. To get started, you'll typically need to clone the repository, set up the environment, and run the application.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Getting Started (Conceptual Steps):</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-600">
+                        <li><strong>Clone the Repository:</strong> Use Git to download the project files to your local machine.</li>
+                        <li><strong>Set Up Environment:</strong> Ensure you have Python installed and any necessary dependencies for the application.</li>
+                        <li><strong>Run the Application:</strong> Follow the specific instructions in the project's `README.md` file to launch and use the messaging application.</li>
+                        <li><strong>Start Communicating:</strong> Begin sending encrypted messages over your chosen network.</li>
+                    </ol>
+                    <p class="text-lg text-gray-700 mt-6">
+                        For detailed and up-to-date instructions on compilation, setup, and usage, please refer to the official GitHub repository's `README.md` file:
+                    </p>
+                    <div class="text-center mt-8">
+                        <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="btn-primary inline-block">
+                            View Detailed Instructions on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full bg-gray-800 text-white py-8 mt-auto">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2025 Enclave Messenger. All rights reserved.</p>
+                <p class="mt-2 text-sm">
+                    <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="text-indigo-300 hover:text-indigo-100">GitHub Repository</a> | Licensed under GPL-3.0
                 </p>
             </div>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl">
-                    <h3 class="text-2xl font-semibold text-green-400 mb-4">Network-Based Communication</h3>
-                    <p class="text-gray-300 mb-4">
-                        The application uses your existing network infrastructure (like Wi-Fi for LAN or your internet connection). This allows for flexible communication depending on your setup.
-                    </p>
-                    <h3 class="text-2xl font-semibold text-green-400 mb-4">End-to-End Encryption</h3>
-                    <p class="text-gray-300">
-                        Messages are encrypted on the sender's device and can only be decrypted by the intended recipient who also has the application and the correct keys. This ensures privacy over any network.
-                    </p>
-                </div>
-                 <div class="text-center">
-                    <svg class="w-full max-w-md mx-auto h-auto text-gray-700" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10" y="20" width="25" height="20" rx="2" stroke="currentColor" stroke-width="1.5" class="text-green-500"/>
-                        <rect x="12" y="38" width="21" height="2" fill="currentColor" class="text-green-400"/>
-                        <line x1="13" y1="23" x2="32" y2="23" stroke="currentColor" stroke-width="1" class="text-green-400"/>
-                        <line x1="13" y1="26" x2="32" y2="26" stroke="currentColor" stroke-width="1" class="text-green-400"/>
-                        <line x1="13" y1="29" x2="32" y2="29" stroke="currentColor" stroke-width="1" class="text-green-400"/>
-                        <text x="15" y="50" font-size="4" fill="currentColor" class="text-gray-300">Sender</text>
-
-                        <path d="M35 30 Q50 10 65 30" stroke="currentColor" stroke-width="1.5" fill="none" class="text-blue-500" stroke-dasharray="3 3"/>
-                        <path d="M35 30 Q50 50 65 30" stroke="currentColor" stroke-width="1.5" fill="none" class="text-blue-500" stroke-dasharray="3 3"/>
-                        <rect x="46" y="27" width="8" height="6" rx="1" fill="currentColor" class="text-blue-600"/>
-                        <path d="M47 30 L53 30" stroke="white" stroke-width="0.5"/>
-                        <text x="40" y="24" font-size="3" fill="currentColor" class="text-gray-400">Encrypted</text>
-
-                        <rect x="65" y="20" width="25" height="20" rx="2" stroke="currentColor" stroke-width="1.5" class="text-green-500"/>
-                        <rect x="67" y="38" width="21" height="2" fill="currentColor" class="text-green-400"/>
-                        <line x1="68" y1="23" x2="87" y2="23" stroke="currentColor" stroke-width="1" class="text-green-400"/>
-                        <line x1="68" y1="26" x2="87" y2="26" stroke="currentColor" stroke-width="1" class="text-green-400"/>
-                        <line x1="68" y1="29" x2="87" y2="29" stroke="currentColor" stroke-width="1" class="text-green-400"/>
-                        <text x="67" y="50" font-size="4" fill="currentColor" class="text-gray-300">Recipient</text>
-
-                        <text x="30" y="60" font-size="3.5" fill="currentColor" class="text-gray-500">Secure Communication over Network (LAN/Internet)</text>
-                    </svg>
-                     <p class="text-sm text-gray-500 mt-2">Simplified representation of encrypted network flow.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About the Project</h2>
-            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-                Ghost Secure Messenger is an open-source project by <a href="https://github.com/chinglen2080" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:underline">chinglen2080</a>.
-                It aims to provide a secure and reliable messaging solution that operates over local networks and the internet, making it accessible while prioritizing privacy.
-            </p>
-            <p class="text-gray-400 mb-8">
-                Contributions and feedback are welcome! Visit the GitHub repository to learn more, report issues, or contribute to the development.
-            </p>
-            <a href="https://github.com/chinglen2080/ghost-secure-messenger" target="_blank" rel="noopener noreferrer" class="btn-primary py-3 px-8 rounded-lg text-lg font-semibold inline-block glow-effect">
-                Explore on GitHub
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 border-t border-gray-700 py-8 text-center">
-        <div class="container mx-auto px-6">
-            <p class="text-gray-500">
-                &copy; <span id="currentYear"></span> Ghost Secure Messenger Project.
-                <br class="sm:hidden"> Design inspired by modern privacy apps.
-            </p>
-            <p class="text-gray-500 text-sm mt-2">
-                View the source on <a href="https://github.com/chinglen2080/ghost-secure-messenger" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline">GitHub</a>.
-            </p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        // Function to set the theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                htmlElement.classList.remove('dark');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+            localStorage.setItem('theme', theme);
         }
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    // Close mobile menu if open after clicking a link
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
+        // Check for saved theme in localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // If no saved theme, check browser preference
+            setTheme('dark');
+        } else {
+            setTheme('light'); // Default to light if no preference
+        }
+
+        // Listen for changes in browser's preferred color scheme
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) { // Only auto-switch if user hasn't manually set a theme
+                setTheme(e.matches ? 'dark' : 'light');
+            }
         });
 
-        // Set current year in footer
-        const currentYearElement = document.getElementById('currentYear');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
-        }
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
     </script>
-
 </body>
 </html>
+
