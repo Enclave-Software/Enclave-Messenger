@@ -28,4 +28,5 @@
 - Pear-to-pear network
 - Multilingual
 - Payment 
+- Meeting mode
 - And More!
