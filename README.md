@@ -20,7 +20,6 @@
 # To do
 - Add SMS support
 - Add Android and iOS support
-- Add APIs
 - Plug-ins
 - Wiki
 - [Ripple](https://github.com/guardianproject/ripple) support
