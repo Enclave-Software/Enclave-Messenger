@@ -9,7 +9,7 @@
 - Enclave Messenger can be installed on (almost) any device because it's based on Python!
 
 # Easter Eggs
-- Encsms contains easter eggs!
+- Enclave messenger contains easter eggs!
 
 # Contact Us
 - You can contact [Chinglen2080](mailto:chinglen14@proton.me)
