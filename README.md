@@ -26,6 +26,6 @@
 - Camera detection 
 - Pear-to-pear network
 - Multilingual
-- Payment 
+- Payments (Via QR code and username)
 - Meeting mode
 - And More!
