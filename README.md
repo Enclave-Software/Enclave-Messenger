@@ -28,5 +28,5 @@
 - Multilingual
 - Payments (Via QR code and username)
 - Meeting mode
-- Switch to [ipfs](https://ipfs.tech/)
+- Switch to [ipfs](https://ipfs.tech/) or make my own :)
 - And More!
