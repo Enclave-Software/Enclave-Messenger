@@ -1,7 +1,4 @@
-"""
-Enclave Messenger - Main GUI Application
-Modern secure messaging interface with advanced features
-"""
+
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox, simpledialog, filedialog
