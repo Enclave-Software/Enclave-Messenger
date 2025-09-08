@@ -16,7 +16,7 @@ We take security seriously. If you discover a security vulnerability, please:
 
 ### 🔒 Private Disclosure
 1. **DO NOT** create a public GitHub issue
-2. Email us at: security@enclave-messenger.example.com
+2. Email us at: chinglen14@proton.me 
 3. Include detailed reproduction steps
 4. Allow us 90 days to address before public disclosure
 
