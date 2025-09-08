@@ -3,283 +3,655 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enclave Messenger - Secure Encrypted Messaging</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Base styles for light mode */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-            color: #374151; /* Dark gray text */
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .container {
-            max-width: 1200px;
-        }
-        .card {
-            background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-            padding: 2rem;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .btn-primary {
-            background-color: #4f46e5; /* Indigo 600 */
-            color: #ffffff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem; /* rounded-lg */
-            font-weight: 600; /* font-semibold */
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #4338ca; /* Indigo 700 */
-        }
-        .feature-icon {
-            color: #4f46e5; /* Indigo 600 */
-        }
-
-        /* Dark mode styles */
-        html.dark body {
-            background-color: #1a202c; /* Dark background */
-            color: #e2e8f0; /* Light text */
-        }
-        html.dark .card {
-            background-color: #2d3748; /* Darker card background */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-        }
-        html.dark .text-gray-800 {
-            color: #e2e8f0; /* Light text for headings */
-        }
-        html.dark .text-gray-600 {
-            color: #a0aec0; /* Lighter gray text */
-        }
-        html.dark .text-gray-700 {
-            color: #cbd5e0; /* Even lighter gray text */
-        }
-        html.dark .feature-icon {
-            color: #81e6d9; /* Teal color for icons in dark mode */
-        }
-        html.dark .bg-white {
-            background-color: #2d3748; /* Darker header/footer background */
-        }
-        html.dark .shadow-sm {
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-        }
-        html.dark .bg-gray-50 {
-            background-color: #1a202c; /* Darker section background */
-        }
-        html.dark .btn-primary {
-            background-color: #667eea; /* Lighter indigo for dark mode button */
-        }
-        html.dark .btn-primary:hover {
-            background-color: #7f9cf5; /* Even lighter indigo on hover */
-        }
-        html.dark .text-indigo-300 {
-            color: #9f7aea; /* Purple for links in dark mode */
-        }
-        html.dark .hover\:text-indigo-100:hover {
-            color: #d6bcfa; /* Lighter purple on hover */
-        }
-    </style>
+    <title>Enclave Messenger - Secure P2P Communication</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
-    <div class="min-h-screen flex flex-col items-center">
+<body>
+    <div class="app-container">
         <!-- Header -->
-        <header class="w-full bg-white shadow-sm py-4">
-            <nav class="container mx-auto px-4 flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-gray-800">Enclave Messenger</a>
-                <div class="flex items-center space-x-4">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
-                    <a href="#security" class="text-gray-600 hover:text-gray-900">Security</a>
-                    <a href="#how-to-use" class="text-gray-600 hover:text-gray-900">How to Use</a>
-                    <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="text-gray-600 hover:text-gray-900">GitHub</a>
-                    <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        <!-- Sun icon for light mode, Moon icon for dark mode -->
-                        <svg id="sun-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.325-4.775l-.707-.707M6.382 17.618l-.707.707M17.618 6.382l.707-.707M6.382 6.382l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z"></path></svg>
-                        <svg id="moon-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    </button>
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>🔐 Enclave Messenger</h1>
+                        <p>End-to-End Encrypted P2P Communication</p>
+                    </div>
+                    <nav class="nav-tabs">
+                        <button class="nav-tab active" data-section="dashboard">Dashboard</button>
+                        <button class="nav-tab" data-section="encryption">Encryption Demo</button>
+                        <button class="nav-tab" data-section="interfaces">Interfaces</button>
+                        <button class="nav-tab" data-section="security">Security</button>
+                        <button class="nav-tab" data-section="installation">Installation</button>
+                        <button class="nav-tab" data-section="easter-eggs">Easter Eggs</button>
+                    </nav>
                 </div>
-            </nav>
+            </div>
         </header>
 
-        <!-- Hero Section -->
-        <section class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 text-center">
-            <div class="container mx-auto px-4">
-                <h1 class="text-5xl font-extrabold mb-4 leading-tight">Enclave Messenger: Secure & Encrypted Communication</h1>
-                <p class="text-xl mb-8 opacity-90">An encrypted messaging application designed for reliable communication over various networks (LAN, WAN, MAN, CAN), especially in areas with limited internet connectivity.</p>
-                <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="btn-primary inline-block">
-                    Explore on GitHub
-                </a>
-            </div>
-        </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <div class="container">
+                    <div class="hero">
+                        <h2>Secure Communication Without Compromise</h2>
+                        <p>Experience true privacy with military-grade encryption, peer-to-peer architecture, and zero server dependency.</p>
+                        <div class="cta-buttons">
+                            <button class="btn btn--primary" onclick="showSection('encryption')">Try Encryption Demo</button>
+                            <button class="btn btn--secondary" onclick="showSection('installation')">Get Started</button>
+                        </div>
+                    </div>
 
-        <!-- Features Section -->
-        <section id="features" class="w-full py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Key Features</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Feature 1: Encrypted Messaging -->
-                    <div class="card flex flex-col items-center text-center">
-                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-2 4h4m6-10V7a4 4 0 00-4-4H8a4 4 0 00-4 4v10a4 4 0 004 4h8a4 4 0 004-4v-2m-6 0H6"></path></svg>
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">End-to-End Encryption</h3>
-                        <p class="text-gray-600">Ensures your messages are private and secure from sender to receiver.</p>
-                    </div>
-                    <!-- Feature 2: Multi-Network Support -->
-                    <div class="card flex flex-col items-center text-center">
-                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9l2.592-5.251a1 1 0 01.948-.684H19a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Versatile Network Compatibility</h3>
-                        <p class="text-gray-600">Works seamlessly across LAN, WAN, MAN, and CAN networks.</p>
-                    </div>
-                    <!-- Feature 3: Low Connectivity Resilience -->
-                    <div class="card flex flex-col items-center text-center">
-                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Offline-Friendly Design</h3>
-                        <p class="text-gray-600">Optimized for reliable communication even in areas with limited internet access.</p>
-                    </div>
-                    <!-- Feature 4: HTML & Python Based -->
-                    <div class="card flex flex-col items-center text-center">
-                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Built with Web Technologies</h3>
-                        <p class="text-gray-600">Developed using HTML and Python for broad compatibility and functionality.</p>
-                    </div>
-                    <!-- Feature 5: Command-Line Interface (Implied by Python/HTML) -->
-                    <div class="card flex flex-col items-center text-center">
-                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 2.895 1.191 5.584 3.14 7.534L12 22.05l5.94-5.94a8 8 0 003.04-8.618A12.001 12.001 0 0021.08 12c0-2.895-1.191-5.584-3.14-7.534z"></path></svg>
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Simple & Secure Setup</h3>
-                        <p class="text-gray-600">Designed for straightforward deployment and use in various environments.</p>
-                    </div>
-                    <!-- Feature 6: Highly Portable (General) -->
-                    <div class="card flex flex-col items-center text-center">
-                        <svg class="feature-icon w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Highly Portable</h3>
-                        <p class="text-gray-600">The application is designed to be easily deployed and used across different systems.</p>
+                    <div class="features-grid">
+                        <div class="feature-card" data-bg="bg-1">
+                            <div class="feature-icon">🔐</div>
+                            <h3>End-to-End Encryption</h3>
+                            <p>Hybrid encryption (RSA-2048 + AES-GCM) with forward secrecy</p>
+                        </div>
+                        <div class="feature-card" data-bg="bg-2">
+                            <div class="feature-icon">🛡️</div>
+                            <h3>No Central Server</h3>
+                            <p>Direct peer-to-peer communication</p>
+                        </div>
+                        <div class="feature-card" data-bg="bg-3">
+                            <div class="feature-icon">📱</div>
+                            <h3>Multi-Platform</h3>
+                            <p>GUI, CLI, and Web interfaces</p>
+                        </div>
+                        <div class="feature-card" data-bg="bg-4">
+                            <div class="feature-icon">🌐</div>
+                            <h3>Network Flexible</h3>
+                            <p>Works on LAN, WAN, and offline</p>
+                        </div>
+                        <div class="feature-card" data-bg="bg-5">
+                            <div class="feature-icon">🔍</div>
+                            <h3>Open Source</h3>
+                            <p>Transparent and auditable</p>
+                        </div>
+                        <div class="feature-card" data-bg="bg-6">
+                            <div class="feature-icon">🎭</div>
+                            <h3>Easter Eggs</h3>
+                            <p>Hidden features and fun commands</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Upcoming Features Section -->
-                <div class="mt-16 card mx-auto max-w-3xl">
-                    <h3 class="text-3xl font-bold text-center mb-6 text-gray-800">Upcoming Features</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-600 text-lg">
-                        <li>SMS, Android, and iOS support</li>
-                        <li>APIs and Plug-in architecture</li>
-                        <li>Integrated Wiki and Ripple support</li>
-                        <li>Camera detection and Peer-to-peer networking</li>
-                        <li>Multilingual support and Payment options</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <!-- Encryption Demo Section -->
+            <section id="encryption" class="section">
+                <div class="container">
+                    <h2>Interactive Encryption Demo</h2>
+                    <p>See how Enclave Messenger protects your messages with military-grade encryption.</p>
+                    
+                    <div class="encryption-demo">
+                        <div class="demo-step">
+                            <h3>1. Key Generation</h3>
+                            <div class="key-generation">
+                                <button class="btn btn--primary" id="generateKeys">Generate RSA Keys</button>
+                                <div class="key-display" id="keyDisplay" style="display: none;">
+                                    <div class="key-pair">
+                                        <div class="key-section">
+                                            <strong>Public Key:</strong>
+                                            <code id="publicKey"></code>
+                                        </div>
+                                        <div class="key-section">
+                                            <strong>Private Key:</strong>
+                                            <code id="privateKey"></code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Security Properties Section -->
-        <section id="security" class="w-full py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Robust Security Properties</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Confidentiality</h3>
-                        <p class="text-gray-600">Message contents are encrypted and only visible to authorized participants.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Authentication</h3>
-                        <p class="text-gray-600">Ensures that messages cannot be undetectably altered by unauthorized parties.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Anonymity</h3>
-                        <p class="text-gray-600">Designed to protect user identity where possible, focusing on secure message delivery.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <div class="demo-step">
+                            <h3>2. Message Encryption</h3>
+                            <div class="message-encryption">
+                                <textarea class="form-control" id="plainMessage" placeholder="Enter your message here..." rows="3">Hello, this is a secret message!</textarea>
+                                <button class="btn btn--primary" id="encryptMessage">Encrypt Message</button>
+                                <div class="encryption-result" id="encryptionResult" style="display: none;">
+                                    <strong>Encrypted Message:</strong>
+                                    <code id="encryptedMessage"></code>
+                                    <strong>AES Key (encrypted with RSA):</strong>
+                                    <code id="encryptedAESKey"></code>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- How to Use / Installation Section -->
-        <section id="how-to-use" class="w-full py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">How to Use Enclave Messenger</h2>
-                <div class="card mx-auto max-w-3xl">
-                    <p class="text-lg text-gray-700 mb-6">
-                        Enclave Messenger is built with HTML and Python. To get started, you'll typically need to clone the repository, set up the environment, and run the application.
-                    </p>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Getting Started (Conceptual Steps):</h3>
-                    <ol class="list-decimal list-inside space-y-2 text-gray-600">
-                        <li><strong>Clone the Repository:</strong> Use Git to download the project files to your local machine.</li>
-                        <li><strong>Set Up Environment:</strong> Ensure you have Python installed and any necessary dependencies for the application.</li>
-                        <li><strong>Run the Application:</strong> Follow the specific instructions in the project's `README.md` file to launch and use the messaging application.</li>
-                        <li><strong>Start Communicating:</strong> Begin sending encrypted messages over your chosen network.</li>
-                    </ol>
-                    <p class="text-lg text-gray-700 mt-6">
-                        For detailed and up-to-date instructions on compilation, setup, and usage, please refer to the official GitHub repository's `README.md` file:
-                    </p>
-                    <div class="text-center mt-8">
-                        <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="btn-primary inline-block">
-                            View Detailed Instructions on GitHub
-                        </a>
+                        <div class="demo-step">
+                            <h3>3. Message Decryption</h3>
+                            <div class="message-decryption">
+                                <button class="btn btn--secondary" id="decryptMessage">Decrypt Message</button>
+                                <div class="decryption-result" id="decryptionResult" style="display: none;">
+                                    <strong>Decrypted Message:</strong>
+                                    <div class="decrypted-text" id="decryptedText"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="encryption-flow">
+                        <h3>Encryption Process Flow</h3>
+                        <div class="flow-diagram">
+                            <div class="flow-step active" id="step1">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Generate AES Key</h4>
+                                    <p>256-bit random key for message encryption</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step" id="step2">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Encrypt Message</h4>
+                                    <p>AES-GCM encryption with authentication</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step" id="step3">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Encrypt AES Key</h4>
+                                    <p>RSA-2048 encryption of the AES key</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step" id="step4">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Transmit</h4>
+                                    <p>Send encrypted message + encrypted key</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Interfaces Section -->
+            <section id="interfaces" class="section">
+                <div class="container">
+                    <h2>Multiple Interface Options</h2>
+                    <p>Choose the interface that best fits your workflow and security needs.</p>
+                    
+                    <div class="interface-tabs">
+                        <button class="interface-tab active" data-interface="gui">GUI Application</button>
+                        <button class="interface-tab" data-interface="cli">CLI Application</button>
+                        <button class="interface-tab" data-interface="web">Web Application</button>
+                    </div>
+
+                    <!-- GUI Interface -->
+                    <div class="interface-content active" id="gui-interface">
+                        <div class="interface-preview">
+                            <div class="gui-mockup">
+                                <div class="window-bar">
+                                    <div class="window-controls">
+                                        <span class="control close"></span>
+                                        <span class="control minimize"></span>
+                                        <span class="control maximize"></span>
+                                    </div>
+                                    <div class="window-title">Enclave Messenger - GUI</div>
+                                </div>
+                                <div class="gui-content">
+                                    <div class="sidebar">
+                                        <div class="contact-list">
+                                            <div class="contact active">
+                                                <div class="avatar">👤</div>
+                                                <div class="contact-info">
+                                                    <div class="name">Alice</div>
+                                                    <div class="status">🟢 Online</div>
+                                                </div>
+                                            </div>
+                                            <div class="contact">
+                                                <div class="avatar">👤</div>
+                                                <div class="contact-info">
+                                                    <div class="name">Bob</div>
+                                                    <div class="status">🟡 Away</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-area">
+                                        <div class="chat-header">
+                                            <h3>Chat with Alice</h3>
+                                            <div class="encryption-status">🔐 End-to-End Encrypted</div>
+                                        </div>
+                                        <div class="messages">
+                                            <div class="message received">
+                                                <div class="message-content">Hey! How's the new encryption working?</div>
+                                                <div class="message-time">2:30 PM</div>
+                                            </div>
+                                            <div class="message sent">
+                                                <div class="message-content">It's amazing! The RSA+AES hybrid is super fast.</div>
+                                                <div class="message-time">2:31 PM</div>
+                                            </div>
+                                        </div>
+                                        <div class="message-input">
+                                            <input type="text" placeholder="Type a message..." />
+                                            <button>Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interface-features">
+                            <h4>GUI Features</h4>
+                            <ul>
+                                <li>User-friendly interface with modern design</li>
+                                <li>Real-time messaging with encryption indicators</li>
+                                <li>Contact management and status tracking</li>
+                                <li>Message history with local encryption</li>
+                                <li>Easter egg detection and fun interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CLI Interface -->
+                    <div class="interface-content" id="cli-interface">
+                        <div class="interface-preview">
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <div class="terminal-controls">
+                                        <span class="control close"></span>
+                                        <span class="control minimize"></span>
+                                        <span class="control maximize"></span>
+                                    </div>
+                                    <div class="terminal-title">Terminal - Enclave Messenger CLI</div>
+                                </div>
+                                <div class="terminal-content" id="terminal-output">
+                                    <div class="terminal-line">
+                                        <span class="prompt">$ </span>python enclave_messenger_cli.py --server
+                                    </div>
+                                    <div class="terminal-line output">
+                                        🔐 Enclave Messenger CLI v1.0
+                                    </div>
+                                    <div class="terminal-line output">
+                                        🛡️ Server mode activated on port 8080
+                                    </div>
+                                    <div class="terminal-line output">
+                                        🔑 RSA keys generated successfully
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="prompt">enclave> </span>/help
+                                    </div>
+                                    <div class="terminal-line output">
+                                        Available commands:
+                                        /send &lt;message&gt; - Send encrypted message
+                                        /key-exchange - Exchange public keys
+                                        /status - Show connection status
+                                        /joke - Random programming joke 😄
+                                        /exit - Exit the application
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="prompt">enclave> </span><span class="cursor">|</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interface-features">
+                            <h4>CLI Features</h4>
+                            <ul>
+                                <li>Server/client modes for flexible deployment</li>
+                                <li>Command-based interaction with help system</li>
+                                <li>Real-time message encryption and transmission</li>
+                                <li>Chat history with timestamp logging</li>
+                                <li>System integration and automation support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Web Interface -->
+                    <div class="interface-content" id="web-interface">
+                        <div class="interface-preview">
+                            <div class="web-mockup">
+                                <div class="browser-bar">
+                                    <div class="browser-controls">
+                                        <span class="control close"></span>
+                                        <span class="control minimize"></span>
+                                        <span class="control maximize"></span>
+                                    </div>
+                                    <div class="address-bar">localhost:5000/chat</div>
+                                </div>
+                                <div class="web-content">
+                                    <div class="web-header">
+                                        <h2>🔐 Enclave Web Chat</h2>
+                                        <div class="user-info">
+                                            <span class="username">You: alice_secure</span>
+                                            <span class="status-indicator">🟢</span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-rooms">
+                                        <div class="room active">#general</div>
+                                        <div class="room">#developers</div>
+                                        <div class="room">@bob (Private)</div>
+                                    </div>
+                                    <div class="web-messages">
+                                        <div class="web-message">
+                                            <span class="sender">bob_dev:</span>
+                                            <span class="content">The encryption is working perfectly! 🔐</span>
+                                            <span class="timestamp">14:25</span>
+                                        </div>
+                                        <div class="web-message own">
+                                            <span class="sender">You:</span>
+                                            <span class="content">Absolutely! No more worrying about eavesdroppers 🛡️</span>
+                                            <span class="timestamp">14:26</span>
+                                        </div>
+                                    </div>
+                                    <div class="web-input">
+                                        <input type="text" placeholder="Type your message..." />
+                                        <button>Send 🚀</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interface-features">
+                            <h4>Web Features</h4>
+                            <ul>
+                                <li>Real-time chat rooms with WebSocket support</li>
+                                <li>Private messaging with end-to-end encryption</li>
+                                <li>User management and authentication</li>
+                                <li>Responsive design for all devices</li>
+                                <li>Cross-platform browser compatibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Section -->
+            <section id="security" class="section">
+                <div class="container">
+                    <h2>Security Architecture</h2>
+                    <p>Multi-layered security approach ensuring your communications remain private.</p>
+                    
+                    <div class="security-layers">
+                        <div class="layer" data-layer="application">
+                            <div class="layer-header" style="background-color: #E74C3C;">
+                                <h3>Application Layer</h3>
+                                <p>Message encryption and key management</p>
+                            </div>
+                            <div class="layer-details">
+                                <ul>
+                                    <li>🔐 RSA-2048 public key cryptography</li>
+                                    <li>🗝️ AES-256-GCM symmetric encryption</li>
+                                    <li>🔄 Perfect forward secrecy</li>
+                                    <li>✅ Message authentication codes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="layer" data-layer="transport">
+                            <div class="layer-header" style="background-color: #F39C12;">
+                                <h3>Transport Layer</h3>
+                                <p>Secure socket communication</p>
+                            </div>
+                            <div class="layer-details">
+                                <ul>
+                                    <li>🔒 TLS/SSL socket encryption</li>
+                                    <li>🛡️ Certificate validation</li>
+                                    <li>🚫 Man-in-the-middle protection</li>
+                                    <li>🔄 Automatic reconnection</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="layer" data-layer="network">
+                            <div class="layer-header" style="background-color: #3498DB;">
+                                <h3>Network Layer</h3>
+                                <p>P2P direct connections</p>
+                            </div>
+                            <div class="layer-details">
+                                <ul>
+                                    <li>🌐 Direct peer-to-peer routing</li>
+                                    <li>🚫 No central server dependency</li>
+                                    <li>🔍 NAT traversal techniques</li>
+                                    <li>📍 IP address privacy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="layer" data-layer="physical">
+                            <div class="layer-header" style="background-color: #27AE60;">
+                                <h3>Physical Layer</h3>
+                                <p>Network infrastructure</p>
+                            </div>
+                            <div class="layer-details">
+                                <ul>
+                                    <li>🌐 LAN/WAN/Internet support</li>
+                                    <li>📡 Wireless and wired networks</li>
+                                    <li>🔄 Offline message queuing</li>
+                                    <li>⚡ Low-latency transmission</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="network-topology">
+                        <h3>P2P Network Topology</h3>
+                        <div class="topology-diagram">
+                            <div class="peer" data-peer="you">
+                                <div class="peer-icon">💻</div>
+                                <div class="peer-label">You</div>
+                            </div>
+                            <div class="connection direct"></div>
+                            <div class="peer" data-peer="friend">
+                                <div class="peer-icon">📱</div>
+                                <div class="peer-label">Friend</div>
+                            </div>
+                            <div class="no-server">
+                                <div class="crossed-server">
+                                    <div class="server-icon">🏢</div>
+                                    <div class="cross">❌</div>
+                                </div>
+                                <div class="no-server-label">No Central Server</div>
+                            </div>
+                        </div>
+                        <div class="topology-benefits">
+                            <div class="benefit">
+                                <strong>🔐 Enhanced Privacy:</strong> No third party can access your messages
+                            </div>
+                            <div class="benefit">
+                                <strong>⚡ Faster Communication:</strong> Direct connection reduces latency
+                            </div>
+                            <div class="benefit">
+                                <strong>🛡️ Increased Security:</strong> Eliminates single point of failure
+                            </div>
+                            <div class="benefit">
+                                <strong>🌐 Network Independence:</strong> Works without internet in LAN mode
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Installation Section -->
+            <section id="installation" class="section">
+                <div class="container">
+                    <h2>Installation Guide</h2>
+                    <p>Get started with Enclave Messenger in just a few simple steps.</p>
+                    
+                    <div class="installation-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Download</h3>
+                                <p>Get the latest version from GitHub</p>
+                                <div class="code-block">
+                                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    <code>git clone https://github.com/chinglen2080/enclave-messenger</code>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Setup</h3>
+                                <p>Run the automated setup script</p>
+                                <div class="code-block">
+                                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    <code>python setup.py</code>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Launch</h3>
+                                <p>Start your preferred interface</p>
+                                <div class="code-options">
+                                    <div class="code-block">
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        <code># GUI Version<br>python enclave_messenger_gui.py</code>
+                                    </div>
+                                    <div class="code-block">
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        <code># CLI Version<br>python enclave_messenger_cli.py</code>
+                                    </div>
+                                    <div class="code-block">
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        <code># Web Version<br>python enclave_messenger_web.py</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Connect</h3>
+                                <p>Exchange keys and start chatting securely</p>
+                                <div class="code-block">
+                                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    <code>/key-exchange</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="requirements">
+                        <h3>System Requirements</h3>
+                        <div class="req-grid">
+                            <div class="req-item">
+                                <h4>🐍 Python</h4>
+                                <p>Python 3.8 or higher</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>📦 Dependencies</h4>
+                                <p>cryptography, tkinter, flask, socketio</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>💾 Storage</h4>
+                                <p>50MB free space</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>🌐 Network</h4>
+                                <p>LAN/WAN connectivity (optional for offline)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Easter Eggs Section -->
+            <section id="easter-eggs" class="section">
+                <div class="container">
+                    <h2>Easter Eggs & Fun Commands</h2>
+                    <p>Discover hidden features and playful interactions built into Enclave Messenger.</p>
+                    
+                    <div class="easter-egg-demo">
+                        <h3>Try the Commands</h3>
+                        <div class="command-input">
+                            <input type="text" id="easterEggInput" placeholder="Type a command (e.g., /joke, /ascii, /boom)..." />
+                            <button class="btn btn--primary" onclick="executeEasterEgg()">Execute</button>
+                        </div>
+                        <div class="command-output" id="commandOutput"></div>
+                    </div>
+                    
+                    <div class="easter-eggs-list">
+                        <div class="egg-item">
+                            <div class="egg-command">/joke</div>
+                            <div class="egg-description">Random programming jokes to lighten the mood</div>
+                            <div class="egg-example">
+                                <button class="btn btn--secondary btn--sm" onclick="showEggExample('/joke')">Try It</button>
+                            </div>
+                        </div>
+                        
+                        <div class="egg-item">
+                            <div class="egg-command">/ascii</div>
+                            <div class="egg-description">ASCII art display for creative expressions</div>
+                            <div class="egg-example">
+                                <button class="btn btn--secondary btn--sm" onclick="showEggExample('/ascii')">Try It</button>
+                            </div>
+                        </div>
+                        
+                        <div class="egg-item">
+                            <div class="egg-command">/boom</div>
+                            <div class="egg-description">Emoji explosion effect for dramatic messages</div>
+                            <div class="egg-example">
+                                <button class="btn btn--secondary btn--sm" onclick="showEggExample('/boom')">Try It</button>
+                            </div>
+                        </div>
+                        
+                        <div class="egg-item">
+                            <div class="egg-command">/matrix</div>
+                            <div class="egg-description">Matrix-style visual mode for the ultimate hacker feel</div>
+                            <div class="egg-example">
+                                <button class="btn btn--secondary btn--sm" onclick="showEggExample('/matrix')">Try It</button>
+                            </div>
+                        </div>
+                        
+                        <div class="egg-item">
+                            <div class="egg-command">/konami</div>
+                            <div class="egg-description">Secret Konami code sequence activation</div>
+                            <div class="egg-example">
+                                <button class="btn btn--secondary btn--sm" onclick="showEggExample('/konami')">Try It</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="konami-listener">
+                        <p class="konami-hint">🎮 Try entering the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A</p>
+                        <div class="konami-progress" id="konamiProgress"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- Footer -->
-        <footer class="w-full bg-gray-800 text-white py-8 mt-auto">
-            <div class="container mx-auto px-4 text-center">
-                <p>&copy; 2025 Enclave Messenger. All rights reserved.</p>
-                <p class="mt-2 text-sm">
-                    <a href="https://github.com/Chinglen2080/Enclave-Messenger" target="_blank" class="text-indigo-300 hover:text-indigo-100">GitHub Repository</a> | Licensed under GPL-3.0
-                </p>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>🔐 Enclave Messenger</h4>
+                        <p>Secure, private, and fun communication for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="https://github.com/chinglen2080/enclave-messenger" target="_blank">GitHub Repository</a></li>
+                            <li><a href="#" onclick="showSection('security')">Security Details</a></li>
+                            <li><a href="#" onclick="showSection('installation')">Installation Guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Features</h4>
+                        <ul>
+                            <li>End-to-End Encryption</li>
+                            <li>P2P Communication</li>
+                            <li>Multi-Platform Support</li>
+                            <li>Open Source</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Enclave Messenger. Open Source Project.</p>
+                </div>
             </div>
         </footer>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-
-        // Function to set the theme
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                htmlElement.classList.add('dark');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            } else {
-                htmlElement.classList.remove('dark');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            }
-            localStorage.setItem('theme', theme);
-        }
-
-        // Check for saved theme in localStorage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // If no saved theme, check browser preference
-            setTheme('dark');
-        } else {
-            setTheme('light'); // Default to light if no preference
-        }
-
-        // Listen for changes in browser's preferred color scheme
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) { // Only auto-switch if user hasn't manually set a theme
-                setTheme(e.matches ? 'dark' : 'light');
-            }
-        });
-
-        // Toggle theme on button click
-        themeToggle.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
-
