@@ -184,9 +184,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 
 ## 👨‍💻 Made By
 
-**Enclave Messenger** - Bringing the original vision to reality
-
-Original concept by **chinglen2080** from Pune, Maharashtra and **ProPoswal** from Haryana.
+**Chinglen2080** from Pune, Maharashtra and **ProPoswal** from Haryana.
 
 *Made in India with ❤️ for secure communication*
 
