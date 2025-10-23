@@ -173,6 +173,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 - [ ] Video/voice calling
 - [ ] Blockchain integration
 - [ ] IPFS storage option
+- [ ] Use UX4G or Material UI
 
 ### Current Status
 - [x] Core encryption implementation
