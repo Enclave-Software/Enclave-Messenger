@@ -173,7 +173,10 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 - [ ] Video/voice calling
 - [ ] Blockchain integration
 - [ ] IPFS storage option
-- [ ] Use UX4G or Material UI
+- [ ] Use UX4G or Material UI for site and apps
+- [ ] Improve GUI application
+- [ ] Improve CLI application  
+- [ ] Improve Web application
 
 ### Current Status
 - [x] Core encryption implementation
@@ -187,7 +190,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 
 **Chinglen2080** from Pune, Maharashtra and **ProPoswal** from Haryana.
 
-*Made in India with ❤️ for secure communication*
+*Made in **India** with ❤️ for secure communication*
 
 ---
 
