@@ -177,7 +177,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 - [ ] Improve GUI application
 - [ ] Improve CLI application  
 - [ ] Improve web application
-- [-] Maybe add TUI?
+- [ ] Maybe add TUI?
 
 ### Current Status
 - [x] Core encryption implementation
