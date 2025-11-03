@@ -178,6 +178,10 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 - [ ] Improve CLI application  
 - [ ] Improve web application
 - [ ] Maybe add TUI?
+- [ ] Add status like WhatsApp (Instagram stories) and discord (like those "whats on your mind")
+- [ ] Non-test user onbording
+- [ ] I know this is stupid and silly, but make my own internet? You may ask "why". I ask you "why not?"
+- [ ] Pear-to-pear interconnected network for messages, images, calls, websites, etc
 
 ### Current Status
 - [x] Core encryption implementation
