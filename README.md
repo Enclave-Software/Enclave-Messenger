@@ -181,15 +181,15 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 - [ ] Add status like WhatsApp (Instagram stories) and Discord (like those "Whats on your mind?")
 - [ ] Non-test user onbording
 - [ ] I know this is stupid and silly, but make my own internet? You may ask "Why". I ask you "Why not?"
-- [ ] Pear-to-pear interconnected network for messages, images, calls, websites, etc
+- [ ] Pear-to-pear interconnected network for messages, images, calls, websites, etc☆
 
 ### Current Status
 - [x] Core encryption implementation
-- [x] GUI application
-- [x] CLI application  
-- [x] Web application
+- [x] GUI application (namesake)
+- [x] CLI application (namesake)
+- [x] Web application (namesake)
 - [x] Cross-platform support
-- [x] Easter eggs and features
+- [x] Easter eggs and features♡
 
 ## 👨‍💻 Made By
 
