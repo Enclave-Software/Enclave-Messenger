@@ -194,7 +194,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 
 ## 👨‍💻 Made By
 
-**Chinglen2080** from Pune, Maharashtra and **ProPoswal** from Haryana.
+**Chinglen2080**(Dev) from Pune, Maharashtra and **ProPoswal**(UI/UX) from Haryana.
 
 *Made in **India** with ❤️ for secure communication*
 
