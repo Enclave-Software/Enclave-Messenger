@@ -182,6 +182,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 - [ ] Non-test user onbording
 - [ ] I know this is stupid and silly, but make my own internet? You may ask "Why". I ask you "Why not?"
 - [ ] Pear-to-pear interconnected network for messages, images, calls, websites, etc☆
+- [ ] Make a 'core' file (cli version with just message, key exchange, etc. No easter eggs, bloat, etc)
 
 ### Current Status
 - [x] Core encryption implementation
